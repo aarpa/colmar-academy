@@ -9,12 +9,23 @@
   <body>
     <!-- Header section -->
     <header>
-      <div class="logo">
-        <img src="./resources/images/ic-logo.svg" alt="logo">
+      <div class="desktop-logo">
+        <a href="#"><img src="./resources/images/ic-logo.svg" alt="logo"></a>
+      </div>
+      <div class="mobile-icon">
+        <a href="#"><img src="./resources/images/ic-on-campus.svg" alt="icon"></a>
+      </div>
+      <div class="mobile-icon">
+        <a href="#"><img src="./resources/images/ic-online.svg" alt="icon"></a>
+      </div>
+      <div class="mobile-icon">
+        <a href="#"><img src="./resources/images/ic-login.svg" alt="icon"></a>
       </div>
       <div class="home">
-        <span class="bold">COLMAR</span>
-        <span class="gray">ACADEMY</span>
+        <a href="#">
+          <span class="bold">Colmar</span>
+          <span class="gray">Academy</span>
+        </a>
       </div>
       <nav>
         <a href="#">On campus</a>
@@ -33,7 +44,7 @@
         <h1>Learn something new everyday</h1>
         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
         <div class="button">
-          <span>Start here</span>
+          <a href="#">Start Here</a>
         </div>
       </div>
     </main>
@@ -52,14 +63,18 @@
           <h5>Emanuel, Sr. Strategist at Hiring.com</h5>
         </div>
       </div>
-
       <div class="highlight-list">
         <div class="highlight orientation">
-          <div class="image">
+          <div class="desktop image">
             <img src="./resources/images/info-orientation.jpg" alt="Orientation">
           </div>
+          <div class="mobile image">
+            <img src="./resources/images/info-orientation-mobile.jpg" alt="Orientation">
+          </div>
           <div class="image-info">
-            <h4>Orientation date</h4>
+            <a href="#">
+              <h4>Orientation date</h4>
+            </a>
             <div class="description">
               <span>Tue 10/11 and Wed 10/12: 8am-3pm</span>
             </div>
@@ -67,11 +82,16 @@
           </div>
         </div>
         <div class="highlight campus">
-          <div class="image">
+          <div class="desktop image">
             <img src="./resources/images/info-campus.jpg" alt="Campus">
           </div>
+          <div class="mobile image">
+            <img src="./resources/images/info-campus-mobile.jpg" alt="Campus">
+          </div>
           <div class="image-info">
-            <h4>Our campus</h4>
+            <a href="#">
+              <h4>Our campus</h4>
+            </a>
             <div class="description">
               <span>Find which campus is close by you</span>
             </div>
@@ -79,11 +99,16 @@
           </div>
         </div>
         <div class="highlight guest">
-          <div class="image">
+          <div class="desktop image">
             <img src="./resources/images/info-guest-lecture.jpg" alt="Guest">
           </div>
+          <div class="mobile image">
+            <img src="./resources/images/info-guest-lecture-mobile.jpg" alt="Guest">
+          </div>
           <div class="image-info">
-            <h4>Our guest lecture</h4>
+            <a href="#">
+              <h4>Our guest lecture</h4>
+            </a>
             <div class="description">
               <span>Join a keynote with Oliver Sack about music in medical treatment</span>
             </div>
@@ -104,7 +129,7 @@
             <img src="./resources/images/course-software.jpg" alt="Software engineering">
           </div>
           <div class="course-info">
-            <h4>Software Engineering</h4>
+            <a href="#">Software Engineering</a> <!--h4-->
             <h5>Courses</h5>
             <div class="description">
               <span>Web Development, Mobile Development, iOT, APIs</span>
@@ -116,7 +141,7 @@
             <img src="./resources/images/course-computer-art.jpg" alt="Computer art">
           </div>
           <div class="course-info">
-            <h4>Computer Art</h4>
+            <a href="#">Computer Art</a>
             <h5>Courses</h5>
             <div class="description">
               <span>Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</span>
@@ -128,7 +153,7 @@
             <img src="./resources/images/course-design.jpg" alt="Design">
           </div>
           <div class="course-info">
-            <h4>Design</h4>
+            <a href="#">Design</a>
             <h5>Courses</h5>
             <div class="description">
               <span>User Experience Design, User Research, Visual Design</span>
@@ -140,7 +165,7 @@
             <img src="./resources/images/course-data.jpg" alt="data">
           </div>
           <div class="course-info">
-            <h4>Data</h4>
+            <a href="#">Data</a>
             <h5>Courses</h5>
             <div class="description">
               <span>Data Science, Big Data, SQL, Data Visualization</span>
@@ -152,7 +177,7 @@
             <img src="./resources/images/course-business.jpg" alt="Business">
           </div>
           <div class="course-info">
-            <h4>Business</h4>
+            <a href="#">Business</a>
             <h5>Courses</h5>
             <div class="description">
               <span>Product Development, Business Development, Startup</span>
@@ -164,7 +189,7 @@
             <img src="./resources/images/course-marketing.jpg" alt="Marketing">
           </div>
           <div class="course-info">
-            <h4>Marketing</h4>
+            <a href="#">Marketing</a>
             <h5>Courses</h5>
             <div class="description">
               <span>Analytics, Content Marketing, Mobile Marketing</span>
@@ -176,37 +201,46 @@
 
     <!-- Thesis section -->
     <div class="thesis">
-      <div class="introduction">
-        <div class="video">
-          <video src="./resources/videos/thesis.mp4" width="320" height="240" controls>
-            Video not supported
-          </video>
-        </div>
-        <h2>Reimagine Urban</h3>
-        <div class="description">
-          <span>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</span>
-        </div>
+      <div class="title">
+        <span>Thesis Exhibit</span>
       </div>
-      <div class="slides">
-        <div class="fisma">
-          <div class="image">
-            <img src="./resources/images/thesis-fisma.jpg" alt="Fisma">
+      <div class="exhibit">
+        <div class="introduction">
+          <div class="video">
+            <video src="./resources/videos/thesis.mp4" controls>Video not supported</video>
           </div>
-          <div>
-            <h4>Fisma: Design and Prototype</h4>
+          <div class="video-info">
+            <h2>Reimagine Urban</h3>
             <div class="description">
-              <span>Designer showcase of new prototype product</span>
+              <span>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</span>
             </div>
           </div>
         </div>
-        <div class="now-and-then">
-          <div class="image">
-            <img src="./resources/images/thesis-now-and-then.jpg" alt="Now and Then">
+        <div class="highlight-list">
+          <div class="highlight fisma">
+            <div class="image">
+              <img src="./resources/images/thesis-fisma.jpg" alt="Fisma">
+            </div>
+            <div class="image-info">
+              <a href="#">
+                <h4>Fisma: Design and Prototype</h4>
+              </a>
+              <div class="description">
+                <span>Designer showcase of new prototype product</span>
+              </div>
+            </div>
           </div>
-          <div>
-            <h4>Now and Then</h4>
-            <div class="description">
-              <span>Research study about New York</span>
+          <div class="highlight now-and-then">
+            <div class="image">
+              <img src="./resources/images/thesis-now-and-then.jpg" alt="Now and Then">
+            </div>
+            <div class="image-info">
+              <a href="#">
+                <h4>Now and Then</h4>
+              </a>
+              <div class="description">
+                <span>Research study about New York</span>
+              </div>
             </div>
           </div>
         </div>

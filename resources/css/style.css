@@ -9,18 +9,17 @@ html {
   box-sizing: border-box;
 }
 
-div {
-  /*border: 0.5px solid gray;*/
-}
-
 /*Header styles*/
 header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
+  white-space: nowrap;
 }
 
-.logo img {
+.desktop-logo img,
+.mobile-icon img {
   height: 2.5rem;
   width: auto;
 }
@@ -28,6 +27,7 @@ header {
 .home {
   flex-grow: 1;
   font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .home .bold {
@@ -69,61 +69,59 @@ header nav a {
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 2rem;
   padding-right: 3rem;
 }
 
 .banner h3 {
   font-size: 1.25rem;
   line-height: 1.2;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   padding-right: 3rem;
 }
 
 .banner .button {
   background-color: dimgray;
-  color: white;
   width: 80%;
   padding: 1rem 0;
   text-align: center;
 }
 
-/*Info section styles*/
-.info {
-  display: flex;
-  align-items: center;
+.banner .button a {
+  color: white;
 }
 
-.info .introduction {
+/*Info and thesis section styles*/
+.info,
+.exhibit {
+  display: flex;
+}
+
+.introduction {
   width: 60%;
   flex-shrink: 0;
   padding: 3rem 1.5rem;
 }
 
-.info .introduction img {
+.introduction img,
+.introduction video {
   width: 100%;
 }
 
-.info .image-info {
-  padding-top: 2rem;
-}
-
-.info .image-info h2 {
+.image-info h2,
+.video-info h2 {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.info .image-info div {
-  padding: 1.5rem 0;
-}
-
-.info .image-info h5 {
+.image-info h5,
+.video-info h5 {
   font-size: 0.8rem;
 }
 
-.info .highlight-list {
-  width: 40%;;
+.highlight-list {
+  width: 40%;
   padding-right: 1.5rem;
+  padding-top: 2rem;
   border-left: 0.5px solid lightgray;
 }
 
@@ -133,10 +131,16 @@ header nav a {
   padding: 1rem;
 }
 
-.highlight .image {
+.info .highlight .desktop.image,
+.thesis .highlight .image {
   width: 35%;
   flex-shrink: 0;
   margin-right: 1rem;
+}
+
+.highlight .mobile.image {
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .highlight .image img {
@@ -146,11 +150,13 @@ header nav a {
 .highlight .image-info h4 {
   font-size: 1.2rem;
   font-weight: bold;
+  color: black;
 }
 
 .highlight .image-info div {
   padding: 1rem 0;
   font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .highlight .image-info a {
@@ -158,26 +164,28 @@ header nav a {
   font-size: 0.8rem;
 }
 
-.highlight.guest {
+.highlight.guest,
+.highlight.fisma {
   background-color: lightgray;
 }
 
-/*Courses section styles*/
+/*Courses and thesis section styles*/
 .courses {
   background-color: lightgray;
-  padding: 2.5rem;
 }
 
-.courses .grid-title {
+.courses .grid-title,
+.thesis .title {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+  padding-top: 2rem;
 }
 
 .courses .grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 1.5rem;
 }
 
@@ -196,18 +204,152 @@ header nav a {
   line-height: 1.5;
 }
 
-.grid .course-info h4 {
+.grid .course-info a {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 .grid .course-info h5 {
-  /*font-size: 0.8rem;*/
   color: gray;
   text-transform: uppercase;
   padding: 1rem 0;
 }
 
-.grid .course-info .description {
-  /*font-size: 0.8rem;*/
+.thesis {
+  border-bottom: 0.5px solid lightgray;
+}
+
+.thesis .introduction {
+  padding: 2rem 1.5rem;
+}
+
+.info .introduction .image-info,
+.video-info {
+  padding-top: 2rem;
+}
+
+.info .introduction .image-info div,
+.video-info div {
+  padding: 1.5rem 0;
+  line-height: 1.3;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+footer nav a {
+padding-left: 1rem;
+}
+
+@media only screen and (min-width: 780px) {
+  header .mobile-icon {
+    display: none;
+  }
+
+  .highlight-list .mobile.image {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  header {
+    justify-content: space-around;
+    padding: 1rem 0 0.25rem 0;
+  }
+
+  .banner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .banner .image {
+    width: 100%;
+  }
+
+  .banner .text {
+    width: 100%;
+    margin: 2rem 1rem;
+    /*text-align: center;*/
+  }
+
+  .banner h1 {
+    padding-right: 0;
+  }
+
+  .banner h3 {
+    padding: 0;
+  }
+
+  .banner .button {
+    background-color: gray;
+    width: 100%;
+  }
+
+  .info .highlight-list {
+    width: 100%;
+    padding: 1rem 0;
+    border-left: none;
+    border-bottom: 0.5px solid lightgray;
+  }
+
+  .info .highlight {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .highlight .image-info h4 {
+    padding-top: 1rem;
+  }
+
+  .info .highlight.guest {
+    background-color: white;
+  }
+
+  .courses {
+    background-color: white;
+  }
+
+  .courses .grid {
+    display: flex;
+    padding: 1.5rem 0 2rem 0;
+    border-bottom: 0.5px solid lightgray;
+  }
+
+  .grid .class {
+    width: 45%;
+    background-color: lightgray;
+    text-align: center;
+  }
+
+  .thesis .introduction {
+    width: 100%;
+  }
+
+  header .home,
+  header nav,
+  .info .introduction,
+  .info .desktop.image,
+  .class .course-image,
+  .class .course-info h5,
+  .class .course-info .description,
+  .video-info,
+  .thesis .highlight-list,
+  footer nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .courses .grid {
+    padding: 2rem;
+  }
+
+  .grid .class {
+    width: 100%;
+  }
 }
