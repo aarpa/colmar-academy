@@ -64,8 +64,7 @@ header nav a:hover {
 }
 
 header button:active,
-header nav a:active,
-.courses .grid button:active {
+header nav a:active {
   background-color: #f0ac7d;
   transition: background-color 0 linear 0;
 }
@@ -234,11 +233,10 @@ header nav a:active,
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: flex-start;
   padding: 1.5rem;
 }
 
-.courses .grid .class {
+.courses .grid button {
   width: 30%;
   background-color: white;
   padding: 1rem;
@@ -253,6 +251,11 @@ header nav a:active,
 .courses .grid button:hover {
   background-color: #ff980075;
   transition: background-color 0.25s linear;
+}
+
+.courses .grid button:active {
+  background-color: #f0ac7d;
+  transition: background-color 0 linear 0;
 }
 
 .courses .grid .course-image img {
@@ -429,7 +432,15 @@ padding-left: 1rem;
     background-color: white;
   }
 
-  .grid .class {
+  /*.courses .grid button {
+    background-color: white;
+    width: 45%;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-width: 0;
+  }*/
+
+  .courses .grid button {
     width: 100%;
     background-color: lightgray;
   }
