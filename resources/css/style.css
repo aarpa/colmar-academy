@@ -244,7 +244,13 @@ footer nav a {
 padding-left: 1rem;
 }
 
-@media only screen and (min-width: 780px) {
+/*@media only screen and (min-width: 785px) and (max-width: 900px) {
+  .highlight .image-info h4 {
+    font
+  }
+}*/
+
+@media only screen and (min-width: 790px) {
   header .mobile-icon {
     display: none;
   }
@@ -254,7 +260,7 @@ padding-left: 1rem;
   }
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 790px) {
   header {
     justify-content: space-around;
     padding: 1rem 0 0.25rem 0;
@@ -289,11 +295,21 @@ padding-left: 1rem;
     width: 100%;
   }
 
+  .info {
+    border-bottom: 0.5px solid lightgray;
+    flex-direction: column;
+  }
+
+  .info .introduction {
+    width: 100%;
+    padding: 1.5rem;
+    border-bottom: 0.5px solid lightgray;
+  }
+
   .info .highlight-list {
     width: 100%;
     padding: 1rem 0;
-    border-left: none;
-    border-bottom: 0.5px solid lightgray;
+    display: flex;
   }
 
   .info .highlight {
@@ -310,8 +326,9 @@ padding-left: 1rem;
     background-color: white;
   }
 
-  .courses {
-    background-color: white;
+  .info .highlight.campus {
+    border-left: 0.5px solid lightgray;
+    border-right: 0.5px solid lightgray;
   }
 
   .courses .grid {
@@ -322,7 +339,7 @@ padding-left: 1rem;
 
   .grid .class {
     width: 45%;
-    background-color: lightgray;
+    background-color: white;
     text-align: center;
   }
 
@@ -332,7 +349,6 @@ padding-left: 1rem;
 
   header .home,
   header nav,
-  .info .introduction,
   .info .desktop.image,
   .class .course-image,
   .class .course-info h5,
@@ -344,12 +360,38 @@ padding-left: 1rem;
   }
 }
 
-@media only screen and (max-width: 660px) {
-  .courses .grid {
-    padding: 2rem;
+@media only screen and (max-width: 610px) {
+  .info .introduction {
+    display: none;
+  }
+
+  .info .highlight-list {
+    border-left: none;
+    border-bottom: 0.5px solid lightgray;
+  }
+
+  .info .highlight {
+    justify-content: flex-start;
+  }
+
+  .courses {
+    background-color: white;
   }
 
   .grid .class {
     width: 100%;
+    background-color: lightgray;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .info .highlight-list {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  footer {
+    font-size: 0.75rem;
   }
 }
