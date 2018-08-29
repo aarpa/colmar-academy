@@ -1,7 +1,7 @@
 /*Universal styles*/
 html {
   font-size: 16px;
-  font-family: Verdana;
+  font-family: "Raleway", sans-serif;
   color: #444444;
 }
 
@@ -31,16 +31,43 @@ header {
 }
 
 .home .bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .home .gray {
   color: gray;
 }
 
+header button {
+  background-color: white;
+  width: 25%;
+  padding: 1rem 0 0.5rem 0;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 1rem;
+  border-width: 0;
+}
+
 header nav a {
   font-size: 1.25rem;
-  padding-left: 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+header button:hover,
+header nav a:hover {
+  background-color: #ff980075;
+  transition: background-color 0.25s linear;
+}
+
+header button:active,
+header nav a:active,
+.courses .grid button:active {
+  background-color: #f0ac7d;
+  transition: background-color 0 linear 0;
 }
 
 /*Main banner styles*/
@@ -67,7 +94,7 @@ header nav a {
 
 .banner h1 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 800;
   line-height: 1.2;
   padding-right: 3rem;
 }
@@ -79,15 +106,28 @@ header nav a {
   padding-right: 3rem;
 }
 
-.banner .button {
+.banner button {
+  color: white;
   background-color: dimgray;
   width: 80%;
   padding: 1rem 0;
+  font-size: 1.2rem;
   text-align: center;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 1rem;
+  border-width: 0;
+  box-shadow: 0 0 5px #757575;
 }
 
-.banner .button a {
-  color: white;
+.banner button:hover {
+  background-color: rgba(188, 8, 88, 0.8);
+  transition: background-color 0.2s linear;
+}
+
+.banner button:active {
+  background-color: rgba(242, 17, 92, 0.65);
+  transition: background-color 0 linear 0;
 }
 
 /*Info and thesis section styles*/
@@ -110,7 +150,7 @@ header nav a {
 .image-info h2,
 .video-info h2 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .image-info h5,
@@ -120,8 +160,7 @@ header nav a {
 
 .highlight-list {
   width: 40%;
-  padding-right: 1.5rem;
-  padding-top: 2rem;
+  padding: 2rem 1rem 0 0.5rem;
   border-left: 0.5px solid lightgray;
 }
 
@@ -129,6 +168,12 @@ header nav a {
   display: flex;
   align-items: center;
   padding: 1rem;
+}
+
+.highlight:hover {
+  background-color: hsla(0, 0%, 85%, 0.7);
+  border-radius: 0.5rem;
+  transition: background-color 0.25s linear;
 }
 
 .info .highlight .desktop.image,
@@ -149,24 +194,27 @@ header nav a {
 
 .highlight .image-info h4 {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 700;
   color: black;
+}
+
+.highlight .image-info h4:hover {
+  color: orangered;
+}
+
+.highlight .image-info h4:active {
+  color: #ff9047e6;
 }
 
 .highlight .image-info div {
   padding: 1rem 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 
 .highlight .image-info a {
   color: cornflowerblue;
   font-size: 0.8rem;
-}
-
-.highlight.guest,
-.highlight.fisma {
-  background-color: lightgray;
 }
 
 /*Courses and thesis section styles*/
@@ -177,7 +225,7 @@ header nav a {
 .courses .grid-title,
 .thesis .title {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 800;
   text-align: center;
   padding-top: 2rem;
 }
@@ -186,27 +234,39 @@ header nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: flex-start;
   padding: 1.5rem;
 }
 
-.grid .class {
+.courses .grid .class {
   width: 30%;
   background-color: white;
+  padding: 1rem;
   margin: 1rem;
 }
 
-.grid .course-image img {
+.courses .grid button {
+  border-radius: 0.5rem;
+  border-width: 0;
+}
+
+.courses .grid button:hover {
+  background-color: #ff980075;
+  transition: background-color 0.25s linear;
+}
+
+.courses .grid .course-image img {
   width: 100%;
 }
 
-.grid .course-info {
+.courses .grid .course-info {
   padding: 1rem;
   line-height: 1.5;
 }
 
-.grid .course-info a {
+.courses .grid .course-info a {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .grid .course-info h5 {
@@ -221,6 +281,10 @@ header nav a {
 
 .thesis .introduction {
   padding: 2rem 1.5rem;
+}
+
+.thesis .highlight-list {
+  padding-top: 1rem;
 }
 
 .info .introduction .image-info,
@@ -244,26 +308,29 @@ footer nav a {
 padding-left: 1rem;
 }
 
-/*@media only screen and (min-width: 785px) and (max-width: 900px) {
-  .highlight .image-info h4 {
-    font
-  }
-}*/
-
 @media only screen and (min-width: 790px) {
-  header .mobile-icon {
-    display: none;
-  }
-
+  header .mobile-icon,
   .highlight-list .mobile.image {
     display: none;
   }
 }
 
 @media only screen and (max-width: 790px) {
+  header .desktop-logo,
+  header .home,
+  header nav,
+  .info .desktop.image,
+  .class .course-image,
+  .class .course-info h5,
+  .class .course-info .description,
+  .video-info,
+  .thesis .highlight-list,
+  footer nav {
+    display: none;
+  }
+
   header {
     justify-content: space-around;
-    padding: 1rem 0 0.25rem 0;
   }
 
   .banner {
@@ -279,7 +346,6 @@ padding-left: 1rem;
   .banner .text {
     width: 100%;
     margin: 2rem 1rem;
-    /*text-align: center;*/
   }
 
   .banner h1 {
@@ -290,8 +356,7 @@ padding-left: 1rem;
     padding: 0;
   }
 
-  .banner .button {
-    background-color: gray;
+  .banner button {
     width: 100%;
   }
 
@@ -322,10 +387,6 @@ padding-left: 1rem;
     padding-top: 1rem;
   }
 
-  .info .highlight.guest {
-    background-color: white;
-  }
-
   .info .highlight.campus {
     border-left: 0.5px solid lightgray;
     border-right: 0.5px solid lightgray;
@@ -337,26 +398,16 @@ padding-left: 1rem;
     border-bottom: 0.5px solid lightgray;
   }
 
-  .grid .class {
-    width: 45%;
+  .courses .grid button {
     background-color: white;
-    text-align: center;
+    width: 45%;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-width: 0;
   }
 
   .thesis .introduction {
     width: 100%;
-  }
-
-  header .home,
-  header nav,
-  .info .desktop.image,
-  .class .course-image,
-  .class .course-info h5,
-  .class .course-info .description,
-  .video-info,
-  .thesis .highlight-list,
-  footer nav {
-    display: none;
   }
 }
 
